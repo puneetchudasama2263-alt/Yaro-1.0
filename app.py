@@ -255,13 +255,11 @@ if user_input:
                     "content": answer
                 })
 
-        except Exception as error:
-
-    st.error(
-        f"YARO ERROR: {type(error).__name__}: {error}"
-    )
-
-    print("YARO ERROR:", repr(error))
+               except Exception as error:
+            st.error(
+                f"YARO ERROR: {type(error).__name__}: {error}"
+            )
+            print("YARO ERROR:", repr(error))
 
 # ==================================
 # FOOTER
