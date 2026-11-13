@@ -255,16 +255,13 @@ if user_input:
                     "content": answer
                 })
 
-            except Exception as error:
+        except Exception as error:
 
-                st.error(
-                    "YARO encountered an error. "
-                    "Please check your API settings "
-                    "and try again."
-                )
+    st.error(
+        f"YARO ERROR: {type(error).__name__}: {error}"
+    )
 
-                # Detailed error only in server logs
-                print("YARO ERROR:", repr(error))
+    print("YARO ERROR:", repr(error))
 
 # ==================================
 # FOOTER
