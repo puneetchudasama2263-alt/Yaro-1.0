@@ -14,8 +14,8 @@ st.set_page_config(
 )
 
 # API configuration
-API_KEY = os.getenv("OPENAI_API_KEY")
-MODEL = os.getenv("OPENAI_MODEL", "gpt-6-astra")
+API_KEY = st.secrets.get("OPENAI_API_KEY", "")
+MODEL = st.secrets.get("OPENAI_MODEL", "gpt-4.1-mini")
 
 # ==================================
 # ANIMATED DESIGN
